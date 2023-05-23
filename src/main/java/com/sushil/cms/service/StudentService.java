@@ -1,2 +1,4 @@
-package com.sushil.cms.service;public class StudentService {
+package com.sushil.cms.service;
+
+public class StudentService {
 }

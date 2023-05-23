@@ -1,2 +1,4 @@
-package com.sushil.cms.controller;public class StudentController {
+package com.sushil.cms.controller;
+
+public class StudentController {
 }
