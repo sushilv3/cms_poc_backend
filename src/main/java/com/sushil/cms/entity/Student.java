@@ -7,26 +7,29 @@ import java.util.Objects;
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String id;
+    private Long id;
     @Column
     private String rollNo;
     @Column
     private String name;
     @Column
-    private String address;
+    private String city;
 
-    public Student(String id, String rollNo, String name, String address) {
+    public Student(Long id, String rollNo, String name, String city) {
         this.id = id;
         this.rollNo = rollNo;
         this.name = name;
-        this.address = address;
+        this.city = city;
     }
 
-    public String getId() {
+    public Student() {
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -46,12 +49,12 @@ public class Student {
         this.name = name;
     }
 
-    public String getAddress() {
-        return address;
+    public String getCity() {
+        return city;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setCity(String city) {
+        this.city = city;
     }
 
     @Override
@@ -65,5 +68,15 @@ public class Student {
     @Override
     public int hashCode() {
         return Objects.hash(id);
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", rollNo='" + rollNo + '\'' +
+                ", name='" + name + '\'' +
+                ", city='" + city + '\'' +
+                '}';
     }
 }

@@ -17,30 +17,31 @@ public class StudentService implements StudentImpl {
         this.studentRepository = studentRepository;
     }
 
+
     @Override
     public List<Student> getAll() {
         return studentRepository.findAll();
     }
 
     @Override
-    public Optional<Student> findByStudentId(String id) {
+    public Optional<Student> findByStudentId(Long id) {
         return studentRepository.findById(id);
     }
 
     @Override
-    public Student updateStudentById(String id, Student student) {
-        if(studentRepository.findById(id).isPresent()){
+    public Student updateStudentById(Long id, Student student) {
+        if (studentRepository.findById(id).isPresent()) {
             studentRepository.save(student);
         }
         return null;
     }
 
     @Override
-    public void deleteStudentById(String id) {
+    public void deleteStudentById(Long id) {
     }
 
     @Override
     public Student saveStudent(Student student) {
-        return null;
+        return studentRepository.save(student);
     }
 }
