@@ -3,15 +3,18 @@ package com.sushil.cms.service;
 import com.sushil.cms.entity.Student;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface StudentImpl {
 
     public List<Student> getAll();
 
-    public Student findByStudentId(String id);
+    public Optional<Student> findByStudentId(String id);
 
-    public Student updateStudentById(String id);
+    public Student updateStudentById(String id, Student student);
 
-    public Student deleteStudentById(String id);
+    public void deleteStudentById(String id);
+
+    public Student saveStudent(Student student);
 
 }
