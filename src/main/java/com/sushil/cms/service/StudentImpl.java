@@ -17,4 +17,8 @@ public interface StudentImpl {
 
     public Student saveStudent(Student student);
 
+    public List<Student> saveStudents(List<Student> students);
+
+    public List<Student> findByCity(String city);
+
 }

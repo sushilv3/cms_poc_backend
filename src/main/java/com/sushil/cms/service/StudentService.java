@@ -44,4 +44,15 @@ public class StudentService implements StudentImpl {
     public Student saveStudent(Student student) {
         return studentRepository.save(student);
     }
+
+    @Override
+    public List<Student> saveStudents(List<Student> students) {
+       return studentRepository.saveAll(students);
+
+    }
+
+    @Override
+    public List<Student> findByCity(String city) {
+        return studentRepository.findByCity(city);
+    }
 }
