@@ -1,7 +1,10 @@
 package com.sushil.cms.service;
 
+import com.sushil.cms.controller.StudentController;
 import com.sushil.cms.entity.Student;
 import com.sushil.cms.repository.StudentRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +14,8 @@ import java.util.Optional;
 @Service
 public class StudentService implements StudentImpl {
     private final StudentRepository studentRepository;
+    private static final Logger logger = LoggerFactory.getLogger(StudentService.class);
+
 
     @Autowired
     public StudentService(StudentRepository studentRepository) {
